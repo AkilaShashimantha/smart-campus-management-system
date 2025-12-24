@@ -6,5 +6,6 @@ type Course struct {
 	gorm.Model
 	Name        string    `json:"name"`
 	Description string    `json:"description"`
-	Students    []Student `json:"students"` // Course එකකට ශිෂ්‍යයන් ගොඩක් ඉන්න පුළුවන්
+	Lecturer    string    `json:"lecturer"` 
+	Students    []Student `json:"students"`
 }

@@ -26,3 +26,23 @@ func CreateCourse(c *gin.Context) {
 	config.DB.Create(&input)
 	c.JSON(http.StatusCreated, input)
 }
+
+// Course එකක් Update කිරීම
+func UpdateCourse(c *gin.Context) {
+	id := c.Param("id")
+	var course models.Course
+	if err := config.DB.First(&course, id).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Course not found"})
+		return
+	}
+	c.ShouldBindJSON(&course)
+	config.DB.Save(&course)
+	c.JSON(http.StatusOK, course)
+}
+
+// Course එකක් Delete කිරීම
+func DeleteCourse(c *gin.Context) {
+	id := c.Param("id")
+	config.DB.Delete(&models.Course{}, id)
+	c.JSON(http.StatusOK, gin.H{"message": "Course deleted successfully"})
+}
