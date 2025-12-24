@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_app/screens/add_student_screen.dart';
+import 'package:mobile_app/screens/course_list_screen.dart';
 import '../services/api_service.dart';
 import '../models/student.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,9 +24,17 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Color(0xFFF5F7FB), // ලස්සන Off-white පාටක්
       appBar: AppBar(
-        title: Text("Smart Campus", style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+        title: Text("Smart Campus", style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.white)),
         backgroundColor: Colors.indigo,
         elevation: 0,
+        actions: [
+  IconButton(
+    icon: Icon(Icons.book, color: Colors.white),
+    onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => CourseListScreen()));
+    },
+  )
+],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
