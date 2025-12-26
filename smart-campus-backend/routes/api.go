@@ -18,5 +18,7 @@ func SetupRoutes(r *gin.Engine) {
 		api.GET("/students", controllers.GetAllStudents)
 		api.POST("/students", controllers.CreateStudent)
 		api.GET("/students/:id", controllers.GetStudentByID)
+		api.DELETE("/students/:id", controllers.DeleteStudent)
+		api.POST("/students/enroll", controllers.EnrollStudent)
 	}
 }
