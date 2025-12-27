@@ -70,38 +70,39 @@ Follow these steps to get the project up and running on your local machine.
 
 ### 1. Clone the Repository
 Open your terminal and run:
+```
 ```bash
-git clone [https://github.com/AkilaShashimantha/smart-campus-management-system.git](https://github.com/AkilaShashimantha/smart-campus-management-system.git)
+git clone https://github.com/AkilaShashimantha/smart-campus-management-system.git
 cd Smart_Campus_Project
-
+```
 
 ### 2. Backend Setup
 Navigate to the backend directory:
 ```bash
 cd backend
-
+```
 Install dependencies:
 ```bash
 go mod download
-
+```
 Run the server:
 ```bash
 go run main.go
-
+```
 ### 3. Mobile App Setup
 Navigate to the mobile app directory:
 ```bash
 cd mobile_app
-
+```
 Install dependencies:
 ```bash
 flutter pub get
-
+```
 
 Run the application:
 ```bash
 flutter run
-
+```
 ### 4. Database Setup
 The database is initialized automatically when the server starts. The default SQLite database is created in the root directory of the project.
 
