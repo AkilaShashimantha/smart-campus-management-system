@@ -72,7 +72,7 @@ Follow these steps to get the project up and running on your local machine.
 Open your terminal and run:
 ```
 ```bash
-git clone [https://github.com/AkilaShashimantha/smart-campus-management-system.git](https://github.com/AkilaShashimantha/smart-campus-management-system.git)
+git clone https://github.com/AkilaShashimantha/smart-campus-management-system.git
 cd Smart_Campus_Project
 ```
 
