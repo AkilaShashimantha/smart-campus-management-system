@@ -36,7 +36,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Manage Courses", style: GoogleFonts.poppins()),
+        title: Text("Manage Courses", style: GoogleFonts.poppins(color: Colors.white)),
         backgroundColor: Colors.indigo,
       ),
       body: FutureBuilder<List<Course>>(

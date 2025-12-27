@@ -4,8 +4,8 @@ import "gorm.io/gorm"
 
 type Student struct {
 	gorm.Model
-	Name     string `json:"name"`
-	Email    string `json:"email" gorm:"unique"`
-	Age      int    `json:"age"`
-	CourseID uint   `json:"course_id"` // Foreign Key
+	Name    string   `json:"name"`
+	Email   string   `json:"email" gorm:"unique"`
+	Age     int      `json:"age"`
+	Courses []Course `json:"courses" gorm:"many2many:student_courses;"`
 }

@@ -8,10 +8,10 @@ class Course {
 
   factory Course.fromJson(Map<String, dynamic> json) {
     return Course(
-      id: json['ID'],
-      name: json['name'],
-      description: json['description'],
-      lecturer: json['lecturer'] ?? "N/A",
+      id: json['ID'] ?? 0,
+      name: json['name'] ?? '',
+      description: json['description'] ?? '',
+      lecturer: json['lecturer'] ?? 'N/A',
     );
   }
 }
